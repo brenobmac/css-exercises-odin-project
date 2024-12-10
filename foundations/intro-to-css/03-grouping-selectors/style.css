@@ -1,0 +1,14 @@
+#needy-button,
+#very-needy-button {
+  font-size: 28px;
+  font-family: Helvetica, "Times New Roman", sans-serif;
+}
+
+#needy-button {
+  background-color: black;
+  color: white;
+}
+
+#very-needy-button {
+  background-color: yellow;
+}
