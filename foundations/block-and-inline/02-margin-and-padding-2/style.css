@@ -7,21 +7,57 @@ body {
   width: 400px;
   background: #fff;
   margin: 16px auto;
+  padding: 8px;
 }
 
 .title {
   background: #e3f4ff;
+  margin: 8px;
+  font-size: 16px;
+  padding-left: 8px;
 }
 
 .content {
   background: #e3f4ff;
+  margin: 8px;
+  padding: 16px 8px;
 }
 
 .button-container {
   background: #e3f4ff;
+  margin: 8px;
+  text-align: center;
+  padding: 8px;
 }
 
 button {
   background: white;
   border: 1px solid #eee;
+  display: block;
+  margin: auto;
+  padding: 8px 24px;
 }
+
+/*# Margin and Padding #2
+
+This one is a little nicer looking, and a little closer to something you might see in the real world. 
+You'll need to change a little more than just margin and padding to make it look exactly right.
+
+## Desired outcome
+![desired outcome](./desired-outcome.png)
+
+### Self Check
+Use this section to check your work. On _these_ projects, your goal isn't to attain 100% pixel perfection, 
+but to use the tools you've learned to get relatively close to the desired output.
+
+- There is 8px between the edge of the card and its content (the blue sections) (add padding).
+- There is an 8px gap between each of the blue sections inside the card (each blue section has an 8px margin).
+- The title of the card uses a 16px font (add specified value for font size).
+- There are 8px between the title text and the edge of the title section (this is confunsing, but means add left padding).
+- The content section has 16px space on the top and bottom, and 8px on either side (top/botton padding and left/right padding).
+- Everything inside the `.button-container` section is centered, and there is 8px padding (add specifications).
+- The Big Button is centered on its own line (line break with block display and auto margin will center it).
+- The Big Button has 24px space on the sides, and 8px on top and bottom (padding).
+
+IMPORTANT - FOR PADDING, WHEN TWO VALUES ARE SPCEIFIED, THE FIRST ONE MEANS TOP/BOTTOM AND THE OTHER MEANS LEFT/RIGHT.
+*/
