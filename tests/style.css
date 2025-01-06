@@ -1,16 +1,11 @@
-body {
-  width: 500px;
-  margin: 0 auto;
+.row {
+  list-style-type: none;
+  padding: 16px;
 }
-
-p {
-  background: rgb(255 84 104 / 30%);
-  border: 2px solid rgb(255 84 104);
-  padding: 10px;
-  margin: 10px;
-}
-
-span {
-  background: white;
-  border: 1px solid black;
+.item {
+  height: 50px;
+  border: 2px solid;
+  border-radius: 4px;
+  background: hotpink;
+  margin: 16px;
 }
