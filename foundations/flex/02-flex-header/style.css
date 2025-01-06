@@ -1,6 +1,11 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+
 }
 
 .logo {
@@ -9,11 +14,27 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  The stuff above was not necessary, it was used with justify-content center.
+  The proper way is to just add space-between.
+  */
 }
 
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0;
+  
+
 }
 
 a {
@@ -23,3 +44,14 @@ a {
   /* this removes the line under the links */
   text-decoration: none;
 }
+
+
+/* From the solutions, we need to center the logo in the center.
+We can do that by adding a flex display to the whole container
+and using align items center (vertically)
+and justify content space-between (horizontally)
+We can make the lists ordered horizontally by adding a flex display.
+We can add a gap between each item with the gap property.
+All of the containers inside the flexbox should be centered vertically and horizontally.
+I added a left and right margin for the ul so that they get spaced out of the borders.
+Padding needs to be removed from the ul box so that it doesn't get pushed to the right.
