@@ -12,6 +12,11 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
 }
 
 .profile-image {
@@ -20,6 +25,7 @@ body {
   border-radius: 50%;
   width: 48px;
   height: 48px;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -45,4 +51,26 @@ a {
 
 ul {
   list-style-type: none;
+  display: flex;
+  gap: 16px;
+  margin-right: auto;
 }
+
+/* First thing we need to do is make the li horizontal
+We can do that by adding a flex display.
+We also need to add a gap between each list item.
+We also need to make EVERYTHING placed horizontally, so we add
+a flex display to the header (which is the container that has everything
+in it).
+Inside the header, everything is centered vertically.
+This means we need to align the items vertically in the header.
+We add an 8px gap between all the items, which is indicated in the header.
+We added a 16px padding for the content in the container.
+We centered all the items by justifying the content.
+Now that everything is centered, we can add the proper margins to position
+everything the way we want to.
+We can do this by adding a margin-right auto to the list items, which will
+push the logo and the items to the left while pushiing the notification
+to the right.
+I noticed that the circle gets flattened when we reduce the browser size too much
+so I removed the shrink from the profile image.
