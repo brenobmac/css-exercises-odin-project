@@ -1,0 +1,53 @@
+First things first, from the desired outcome page, we can see that we have 3 
+different sections:
+    One for the header.
+    One for the main content in the center.
+    One for the footer.
+
+Because of that, I added the sidebars and class cards into a new div
+called content.
+
+First things first, I added in the css file a flex display with flex direction
+to column to the body, to separate the header, content and footer.
+
+The main content box will have a flex display with flex:1, so that it 
+spreads, which will make the header stay on top and the footer on bottom.
+
+I also added a container for just the cards, because from the resolution
+it seems that there is one. That container wil also have a column flex-
+direction.
+For that container I added a padding to separate the cards from the 
+border and also a gap between the cards.
+
+For the cards themselves, I added a max height (fit-content) so 
+that they don't stretch all the way down because of the flex: 1
+display for the content box. I also added some padding.
+
+We can see that the sidebar is getting flattened by the card content box.
+Because of that, I added a minimum width of 300px to it, since it's
+not suppoed to shrink in any way according to the readme.
+
+Before fixing the card layout, I fixed the sidebar items.
+I removed the bullet points from the unorded list.
+I removed the link underline.
+Added white color for the text.
+24px for text size.
+Organized the ul in a flex column and aligned items to the left.
+Added a bottom margin for the list items.
+Removed ul padding and margin to properly place the items.
+Added sidebar padding.
+
+Now to fix the header.
+Adjusted font size and weight.
+MAde a flex display for the header so that we can properly center the text.
+Added left-padding of 16px to move the text right.
+
+Now the footer.
+All we needed to do was make a flex display and center everything.
+
+To fix the way the cards are supposed to look, I removed the mas height
+with the purpose of them all fully fitting inside the container.
+What I did instead was set a width to the cards and then add a flex-wrap
+to their container. To add the flex-wrap, I added the flex display 
+to the card container.
+
