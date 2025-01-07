@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -19,7 +20,10 @@ body {
   background: white;
   width: 480px;
   border-radius: 10px;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  padding: 20px;
+  gap: 20px;
 }
 
 .icon {
@@ -33,6 +37,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.header {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.text {
+  margin-bottom: 20px;
 }
 
 .close-button {
@@ -48,6 +63,7 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+  flex-shrink: 0;
 }
 
 button {
@@ -67,3 +83,17 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+
+
+
+/*
+The modal container is the main one, so we add a flex display 
+to separate the ! icon from the text and the x button.
+We can also see from the outcome that the items are separate from one another
+and also the border.
+Because of that, we add a gap and a padding in the modal class, which
+will crate a padding for the whole content (all the items) and add a gap
+between EACH of the items.
+I also edited the text size and boldness for the header, while also 
+adding a bottom margin to separate it from the wall of text.
+I also added a bottom margin to the text to separate it from the buttons.
