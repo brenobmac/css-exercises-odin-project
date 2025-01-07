@@ -2,6 +2,12 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 img {
   width: 100px;
   height: 100px;
@@ -10,7 +16,17 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  margin-bottom: 32px;
 }
+
+.plant{
+  max-width: 200px;
+  text-align: center;
+  margin-left: 52px;
+  margin-right: 52px;
+}
+
+
 
 /* do not edit this footer */
 .footer {
@@ -24,3 +40,14 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+/*
+The containers are all flex displays with centered items.
+For the title, we need it centered in the page and a 32px marging on its bottom.
+The .plant containers need a max width of 200px.
+Their text needs to be aligned in the center.
+We add a left and right margin to separate the items.
+It's important that the .plant container is NOT a flex container. We need
+the images and text items to be organized vertically, not horizontally.
+Adding the flex display will put each item in the .plant container
+in a horizontal organization.
