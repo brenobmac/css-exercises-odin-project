@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -24,3 +27,97 @@ input {
   padding: 8px 24px;
   width: 400px;
 }
+
+.left-links, .right-links {
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+}
+
+ 
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.input, .buttons {
+  margin: 10px;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* 
+Looking at the layout, the first thing we clearly need to do is remove the list
+bullets. We can do that by setting list-style-type to none.
+
+From the way the layout looks, we need three different containers.
+  One for the top part
+  One for the center part
+  One for the bottom part.
+We need to set that up with the HTML part of the code.
+
+We also need to flex the lists so that they are arranged horizontally.
+We also add a gap in their containers so that the list items get separated.
+For the header, we add a flex display so that items are separated
+horizontally, while justifying with space-between (will take the left
+links to the left and the right ones to the right).
+We also add padding to the header so that the links don't touch the borders.
+
+For the content to be properly placed in the middle and to also possibilitate
+the footer to stay in the bottom, we need to also set the content
+as flex.
+However, we need to set it to column, because we want the image on top,
+then the input, then the buttons.
+We center everything.
+
+We added a margin to the input and button items so that they get more
+separated.
+
+Originally, the body is not a flex display. We make it flex and set 
+to flex-direction column.
+We do that because the body is occupying 100% of the screen (100vh). This
+is important because with that setup we can position all the items to 
+occupy the whole screen evenly.
+Think about it this way -> The boudy container is trying to occupy 100%
+of the possible browser size.
+We also need to set flex: 1 to the content container 
+(so that the other items, the
+header and footer, mantain their sizes while the content spreads out 
+to occupy the possible space).
+This way we guarantee that the header stays on top, the content in the center
+and the footer at the bottom.
+I can't really properly explain the flex:1 thing, but check it online
+if needed.
+
+We also remove the margin and padding from the ul boxes, which makes the 
+lists occupy an even space on the screen. Before there was a slight left
+gap that made it not centered.
+
+What is left is setting the look of things, such as background color
+for the footer, removing the blue underline from the list items
+and setting the word colors.
+
